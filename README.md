@@ -3,4 +3,3 @@
  ## Last update: 4.9.24
  #### HW = Homework
  #### LW = Lesson work
-try finding all the secrets :3
