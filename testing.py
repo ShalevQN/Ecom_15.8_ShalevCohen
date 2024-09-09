@@ -1,3 +1,4 @@
-perc = 0.5
-
-print(f"percentage: {perc:.2%}")
+if (not 10) and 10:
+    print('yes')
+else:
+    print("else")
