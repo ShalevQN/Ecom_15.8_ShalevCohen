@@ -18,7 +18,7 @@ volume: int = int(input("What is the volume? (0-10): "))
 match volume:
     case 0:
         print("mute")
-    case volume if 1 <= volume <= 2:
+    case 1 | 2:
         print("very quiet")
     case 3:
         print("quiet")
