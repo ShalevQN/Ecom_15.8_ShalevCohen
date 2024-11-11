@@ -1,2 +1,5 @@
-num_6 = int(input("Enter a 4 digit number: "))
-print((num_6 // 10) % 10)
+x: int = 1
+def foo():
+    print(x)
+    x = 4
+foo()
