@@ -1,22 +1,11 @@
-def two_list_sort(lst_x: list[int], lst_y: list[int]):
-    return_list = lst_x.copy()  # Create a copy to avoid modifying the original list
+import string
 
-    # Insert elements from lst_y into return_list
-    for num in lst_y:
-        if num in return_list:  # Avoid duplicates
-            continue
+# List of symbols to map to each ASCII character (printable range only)
+symbols = [chr(i) for i in range(33, 127)]
 
-        # Find the correct place to insert num by checking each element in return_list
-        for i in range(len(return_list)):
-            if return_list[i] > num:
-                return_list.insert(i, num)
-                break
-        else:
-            # If no insert was made (num is larger than all elements), append at the end
-            return_list.append(num)
+# Manually set the space to map to "__" and assign the rest
+coder_dict = {" ": "__"}
+coder_dict.update({char: symbols[i] for i, char in enumerate(string.printable[1:-6])})
 
-    return return_list
-
-
-# Test with your example:
-print(two_list_sort([2, 2, 4], [1, 3, 4, 5]))
+# Print the dictionary
+print(coder_dict)
