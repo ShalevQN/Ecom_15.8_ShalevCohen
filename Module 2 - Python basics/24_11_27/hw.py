@@ -59,4 +59,4 @@ def two_list_sort(lst_x: list[int], lst_y: list[int]):
             return_list.append(num)
     return return_list
 
-print(two_list_sort([1,2,4], [1,3,4]))
+print(two_list_sort([1,2,4], [1,3,4, 5 ,6]))

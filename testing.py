@@ -1,11 +1,10 @@
-import string
-
-# List of symbols to map to each ASCII character (printable range only)
-symbols = [chr(i) for i in range(33, 127)]
-
-# Manually set the space to map to "__" and assign the rest
-coder_dict = {" ": "__"}
-coder_dict.update({char: symbols[i] for i, char in enumerate(string.printable[1:-6])})
-
-# Print the dictionary
-print(coder_dict)
+array= [True, True, True, False, True, True]
+def successive_check(bool_list: list[bool]):
+    for i , object_bool in (1, enumerate(bool_list)):
+        #print(i)
+        # if i - 1 == -1:
+        #     continue
+        if object_bool == bool_list[i-1]:
+            return i
+    else: return -1
+print("Successive Check: ", successive_check(array))
