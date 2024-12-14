@@ -1,0 +1,32 @@
+1-
+CREATE TABLE - פותח טבלה חדשה בשם
+shopping
+id INTEGER PRIMARY KEY - מוסיף עמודה בשם ID שהיא גם הPRIMARY KEY
+name TEXT - מוסיף עמודה בשם name שהוא text
+amount INTEGER - מוסיף עמודה בשם amount שהוא integer
+
+DROP TABLE shopping - מוחק את טבלה shopping
+
+2-
+ALTER table shopping - משנה את טבלה שופינג
+RENAME to shopp - שנה שם ל shopp
+
+ALTER table shopp rename to shopping - משנה את השם חזרה לשופינג
+
+3-
+INSERT INTO shopping VALUES - מוסיפה רשומה לטבלה לפי הערכים הכתובים
+
+4-
+select * from shopping - מציג את כל תוכן הטבלה שופינג (עמודות ושורות)
+
+5-
+SELECT id, name FROM shopping - מציג רק את העמודות id ו-name מכל השורות
+
+6-
+SELECT * FROM shopping WHERE - עושה פילטר מכל העמודות בטבלה וwhere זה כמו if ככה שהוא מציג את:
+כל השורות שבהן הכמות גדולה מ5
+כל השורות שבהן הכמות שווה ל2
+כל השורות שבהן השם הוא BAMBA
+
+7-
+DELETE FROM shopping WHERE name LIKE 'Orange' - מוחק את השורות שבהן השם הוא אורנג'
