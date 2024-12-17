@@ -1,0 +1,4 @@
+select name, salary from COMAPNY
+where SALARY = (select avg(salary) from COMPANY)
+
+SELECT count(salary) from COMPANY where salary > (SELECT avg(salary) FROM COMPANY)
