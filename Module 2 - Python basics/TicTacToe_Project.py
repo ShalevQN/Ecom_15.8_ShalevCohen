@@ -1,7 +1,7 @@
 import re
 import random
 
-def initialize_board(rows, cols):
+def reset_board(rows, cols):
     return [[0 for _ in range(cols)] for _ in range(rows)]
 
 def draw_board(current_board):
@@ -116,7 +116,7 @@ def play_game():
             if rows < 3 or cols < 3:
                 print("The board must be at least 3x3. Please try again.")
                 continue
-            current_board = initialize_board(rows, cols)
+            current_board = reset_board(rows, cols)
         except ValueError:
             print("Invalid input")
             continue
