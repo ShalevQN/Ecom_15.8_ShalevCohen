@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="sqlprojecthannukka2.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1692"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Employees" custom_title="0" dock_id="1" table="4,9:mainEmployees"/><dock_state state="000000ff00000000fd0000000100000002000005bb00000398fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000005bb0000012300ffffff000005bb0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Departments" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="93"/><column index="2" value="127"/><column index="3" value="87"/><column index="4" value="55"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employees" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="81"/><column index="2" value="127"/><column index="3" value="223"/><column index="4" value="63"/><column index="5" value="58"/><column index="6" value="95"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE Departments (
+    department_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    building TEXT NOT NULL,
+    budget INTEGER DEFAULT 100000
+);
+
+CREATE TABLE Employees (
+    employee_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    salary REAL NOT NULL,
+    seniority INTEGER NOT NULL,
+    department_id INTEGER,
+    FOREIGN KEY (department_id) REFERENCES Departments(department_id)
+);
+
+INSERT INTO Departments (name, building, budget) VALUES 
+('Human Resources', 'Building A', 120000),
+('IT', 'Building B', 200000),
+('Finance', 'Building C', 150000),
+('Marketing', 'Building A', 100000),
+('Operations', 'Building C', 180000);
+
+INSERT INTO Employees (name, email, salary, seniority, department_id) VALUES 
+-- Employees with a valid department_id
+('John Smith', 'john.smith@example.com', 50000, 5, 1),
+('Emily Johnson', 'emily.johnson@example.com', 60000, 6, 2),
+('Michael Brown', 'michael.brown@example.com', 55000, 4, 3),
+('Sarah Davis', 'sarah.davis@example.com', 62000, 7, 1),
+('David Wilson', 'david.wilson@example.com', 58000, 3, 4),
+('Jessica Taylor', 'jessica.taylor@example.com', 49000, 2, 5),
+('Daniel Moore', 'daniel.moore@example.com', 61000, 8, 2),
+('Emma Anderson', 'emma.anderson@example.com', 53000, 5, 4),
+('Chris Thomas', 'chris.thomas@example.com', 52000, 4, 3),
+('Sophia Martinez', 'sophia.martinez@example.com', 60000, 6, 1),
+('Anna White', 'anna.white@example.com', 51000, 3, 2),
+('Robert Green', 'robert.green@example.com', 56000, 4, 4),
+('Alice Black', 'alice.black@example.com', 59000, 5, 3),
+('Steven Gray', 'steven.gray@example.com', 65000, 7, 1),
+('Megan Brown', 'megan.brown@example.com', 47000, 2, 5),
+('Laura Blue', 'laura.blue@example.com', 48000, 3, NULL),
+('George White', 'george.white@example.com', 52000, 4, NULL),
+('Thomas Red', 'thomas.red@example.com', 55000, 5, NULL),
+('Lily Green', 'lily.green@example.com', 50000, 2, NULL),
+('Jacob Black', 'jacob.black@example.com', 53000, 4, NULL),
+('Eleanor Gray', 'eleanor.gray@example.com', 54000, 3, NULL),
+('Henry Gold', 'henry.gold@example.com', 62000, 6, NULL),
+('Sophia Blue', 'sophia.blue@example.com', 57000, 5, NULL),
+('James Pink', 'james.pink@example.com', 51000, 2, NULL),
+('Olivia Violet', 'olivia.violet@example.com', 60000, 6, 3),
+('Mason Silver', 'mason.silver@example.com', 58000, 4, 2),
+('Lucas Brown', 'lucas.brown@example.com', 54000, 3, 5),
+('Isabella Gold', 'isabella.gold@example.com', 59000, 5, 1),
+('Charlotte Green', 'charlotte.green@example.com', 61000, 7, 4),
+('Amelia Purple', 'amelia.purple@example.com', 48000, 2, 2);
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
