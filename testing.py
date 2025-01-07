@@ -1,10 +1,4 @@
-array= [True, True, True, False, True, True]
-def successive_check(bool_list: list[bool]):
-    for i , object_bool in (1, enumerate(bool_list)):
-        #print(i)
-        # if i - 1 == -1:
-        #     continue
-        if object_bool == bool_list[i-1]:
-            return i
-    else: return -1
-print("Successive Check: ", successive_check(array))
+values_to_insert: list = [(1, 'Avokado', 5), (2, 'Milk', 2), (3, 'Bread', 3), (4, 'Chocolate', 8), (5, 'Bamba', 5), (6, 'Orange', 10)]
+
+for value in values_to_insert:
+    cursor.execute('''INSERT INTO shopping VALUES (?, ?, ?)''', value)
