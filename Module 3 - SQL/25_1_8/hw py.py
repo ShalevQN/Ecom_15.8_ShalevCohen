@@ -1,7 +1,7 @@
 import sqlite3
 import sqlitelib
 
-db_name: str = "hwsql3.db"
+db_name: str = "hwsql4.db"
 conn, cursor = sqlitelib.connect_db(db_name)
 
 
