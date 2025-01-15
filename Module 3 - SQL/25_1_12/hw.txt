@@ -1,0 +1,14 @@
+q1:
+PARTITION- divides the table to pieces, which makes the query run faster and managing large data easier.
+
+q2:
+-> - accessing json files
+
+q3:
+the code creates a table
+inserting data
+a - selects the first element of the array for each row
+b - finding rows where the array contains the number 3
+
+q4:
+generated always - blocks the ability to be directly inserted or updated, and always generates as the expression after.
